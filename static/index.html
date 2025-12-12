@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movies REST API</title>
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/movies.css" />
+  </head>
+  <body>
+    <h1 class="page__title">Movies <span>REST API</span></h1>
+
+    <div class="page">
+      <aside class="filters">
+        <label class="filters__label" for="genre">Filters:</label>
+        <select class="filters__select" id="genre">
+          <option value="">All</option>
+        </select>
+
+        <select id="certificate" class="filters__select">
+          <option value="">All Ratings</option>
+        </select>
+
+        <input
+          class="filters__input"
+          type="number"
+          id="year_from"
+          placeholder="Year From"
+        />
+        <input
+          class="filters__input"
+          type="number"
+          id="year_to"
+          placeholder="Year To"
+        />
+
+        <label class="filters__label" for="sort">Sort:</label>
+        <select class="filters__select" id="sort">
+          <option value="rating_desc">Rating ᐱ</option>
+          <option value="rating_asc">Rating ᐯ</option>
+          <option value="title_asc">Title ᐱ</option>
+          <option value="title_desc">Title ᐯ</option>
+          <option value="year_asc">Year ᐱ</option>
+          <option value="year_desc">Year ᐯ</option>
+        </select>
+
+        <button class="filters__btn" id="applyFilters">Apply</button>
+      </aside>
+
+      <section class="movies" id="movies"></section>
+    </div>
+
+    <div class="pagination" id="pagination"></div>
+
+    <script src="/static/script/index.js"></script>
+  </body>
+</html>

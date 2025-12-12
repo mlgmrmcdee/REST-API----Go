@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="/static/css/movie.css" />
+  </head>
+
+  <body>
+    <a class="back" href="/"><- Back</a>
+
+    <div class="movie-container">
+      <img id="poster" class="poster" src="" />
+
+      <div class="info">
+        <div class="inline-div">
+          <h1 id="title"></h1>
+          <p class="year">
+            (<span class="label"></span><span id="year"></span>)
+          </p>
+        </div>
+
+        <p class="duration_p"><span id="duration"></span> min</p>
+        <p class="certificate_p"><span id="certificate"></span>+</p>
+
+        <p id="description"></p>
+
+        <p><span class="label">Genres:</span> <span id="genres"></span></p>
+        <p><span class="label">Directors:</span> <span id="directors"></span></p>
+        <p><span class="label">Actors:</span> <span id="actors"></span></p>
+      </div>
+
+      <div class="center-div">
+        <span id="rating"></span>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script/movie.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+/* Подключаем Roboto через Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap");
+
+/* Основные цвета */
+:root {
+  --color-bg: #000000;
+  --color-main: #121212;
+  --color-accent: #e2b616;
+  --color-text: #ffffff;
+  --color-card-bg: #1a1a1a;
+  --color-card-hover: #2a2a2a;
+}
+
+/* Сброс и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* Заголовок */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 36px;
+  font-weight: 600; /* semi-bold */
+  color: var(--color-text);
+}
+
+h1 > span {
+  color: var(--color-accent);
+}
+
+/* Flex контейнер */
+.page {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Фильтры слева */
+.filters {
+    background: linear-gradient(
+    to top,
+    var(--color-bg) 75%,
+    var(--color-main) 100%
+  );
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 15px;
+}
+
+.filters label {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.filters select,
+.filters input,
+.filters button {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+  background-color: #222222;
+  color: var(--color-text);
+}
+
+.filters button {
+  background-color: var(--color-accent);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: black;
+  font-weight: 600; /* semi-bold */
+}
+
+.movies {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.movie-card {
+  position: relative;
+  background: linear-gradient(
+    to top,
+    var(--color-bg) 0%,
+    var(--color-main) 20%
+  );
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+  background-color: var(--color-card-hover);
+}
+
+.movie-card__img {
+  width: 100%;
+  height: auto; /* подстраивается под постер */
+}
+
+.movie-card__body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movie-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.movie-card__info {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.movie-card__rating {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 5px;
+}
+
+.movie-card__rating .star {
+  color: gold;
+  font-size: 14px;
+}
+
+/* Пагинация */
+.pagination {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  padding: 5px 10px;
+  background-color: var(--color-card-bg);
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.page-btn.disabled {
+  background-color: #111;
+  cursor: not-allowed;
+  color: #555;
+}

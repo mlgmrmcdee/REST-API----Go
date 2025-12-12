@@ -1,0 +1,120 @@
+:root {
+  --color-bg: #000000;
+  --color-main: #121212;
+  --color-accent: #e2b616;
+  --color-text: #ffffff;
+  --color-card-bg: #1a1a1a;
+  --color-card-hover: #2a2a2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Back button */
+.back {
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--color-accent);
+  transition: opacity 0.2s;
+}
+
+.back:hover {
+  opacity: 0.7;
+}
+
+/* Movie layout */
+.movie-container {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    to top,
+    var(--color-main) 25%,
+    var(--color-bg) 100%
+  );
+}
+
+.poster {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.label {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.year {
+  font-size: 36px;
+  font-weight: 600;
+}
+.certificate_p {
+  font-size: 18px;
+  color: var(--color-accent);
+  margin-top: 10px;
+}
+
+.inline-div {
+  gap: 10px;
+}
+
+.duration_p {
+  font-size: 18px;
+  color: var(--color-accent);
+  display: none;
+}
+
+#certificate {
+  font-size: 18px;
+  color: var(--color-accent);
+}
+
+#description {
+  padding: 100px 0 50px 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+#rating {
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
